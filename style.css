@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  margin: 0;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  flex: auto;
+}
+
+.hover {
+  background-color: blueviolet;
+}
