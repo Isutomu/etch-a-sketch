@@ -2,7 +2,16 @@ function createCube(width) {
     const cube = document.createElement('div');
     cube.classList.add('cube');
     cube.style.minWidth = `${width}%`;
-    cube.addEventListener('mouseover', (e) => e.target.classList.add('hover'));
+    cube.style.backgroundColor = 'white';
+    cube.style.opacity = 1;
+    cube.addEventListener('mouseover', (e) => {
+        if (e.target.style.backgroundColor!=='white') {
+            e.target.style.opacity = String(Number(e.target.style.opacity) - 0.1);
+        }
+        else {
+            e.target.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+        }
+    });
     return cube;
 }
 
@@ -14,7 +23,7 @@ function addCubes(cubesPerLine, container) {
 }
 
 const container = document.querySelector('.container');
-var cubesPerLine = 16;
+let cubesPerLine = 16;
 addCubes(cubesPerLine, container);
 
 const buttonRequestInput = document.querySelector('.requestInput');
