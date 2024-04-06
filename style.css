@@ -1,12 +1,18 @@
 .container {
+  width: 45%;
   display: flex;
-  margin: 0;
+  flex-wrap: wrap;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.requestInput {
+  display: block;
 }
 
 .cube {
-  width: 100px;
-  height: 100px;
-  flex: auto;
+  aspect-ratio: 1;
+  flex: 1 0 auto;
 }
 
 .hover {
